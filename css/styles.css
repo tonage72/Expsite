@@ -41,7 +41,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	flex-flow: row nowrap;
-	gap: 1ch;
+	gap: 3%;
 }
 
 .social-icon {
@@ -49,11 +49,11 @@ header {
 }
 
 #social-icons img:first-child {
-	width: 50px;
+	width: clamp(15px, 6vw, 65px);
 }
 
 #social-icons img:nth-child(2){
-	width: 50px;
+	width: clamp(15px, 6vw, 65px);
 }
 
 nav {
@@ -103,7 +103,7 @@ nav {
 }
 
 #menu-word {
-	position: absolute;
+	position: fixed;
 	top: 45px;
 	color: white;
 	left: 20px;
