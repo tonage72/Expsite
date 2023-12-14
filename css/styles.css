@@ -19,6 +19,7 @@ html {
 }
 
 body {
+	position: relative;
 	background-color: rgb(0, 77, 77);
 }
 
@@ -46,15 +47,32 @@ header {
 }
 
 .social-icon {
+	font-size: 6vw;
+}
+
+aside {
+	position: absolute;
+	top: -328px;
+	width: 100%;
+	text-align: center;
 	font-size: 3rem;
+	background-color: rgb(147, 133, 133);
+}
+
+aside::before {
+	position: absolute;
+	background-color: red;
+	content: "";
+	top: 328px;
+	left: 0;
+	width: 100px;
+	height: 100px;
 }
 
 #social-icons i:first-child {
 	color: red;
-	/* background-color: white; */
 }
 
 #social-icons i:nth-child(2){
 	color: blue;
-	/* background-color: white; */
 }
