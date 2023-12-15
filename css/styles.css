@@ -16,9 +16,18 @@ html {
 	font-size: 16px;
 }
 
+:root {
+	--violet-jtc: hsla(320, 41%, 23%, 1);
+	--columbia-blue: hsla(212, 42%, 82%, 1);
+	--mint-cream: hsla(138, 33%, 94%, 1);
+	--desert-sand: hsla(27, 37%, 76%, 1);
+	--gray: hsla(0, 0%, 50%, 1);
+}
+
 body {
 	position: relative;
-	background-color: rgb(0, 77, 77);
+	height: 100vh;
+	background-color: var(--columbia-blue);
 }
 
 header {
@@ -28,12 +37,15 @@ header {
 	grid-template-columns: auto;
 	grid-template-rows: auto auto;
 	width: 100%;
-	background-color: grey;
 }
 
 #title {
-	font-size: clamp(.2rem, 6vw, 5rem);
+	font-size: clamp(.2rem, 8vw, 5rem);
 	line-height: 1em;
+	padding: 2rem;
+	background-color: var(--mint-cream);
+	color: var(--violet-jtc);
+	border-radius: 10px;
 }
 
 #social-icons {
@@ -41,6 +53,7 @@ header {
 	align-items: center;
 	justify-content: center;
 	flex-flow: row nowrap;
+	padding-top: 0;
 	gap: 3%;
 }
 
@@ -56,6 +69,10 @@ header {
 	width: clamp(15px, 6vw, 65px);
 }
 
+main {
+	height: 100%;
+}
+
 nav {
 	position: absolute;
 	top: -320px;
@@ -63,7 +80,7 @@ nav {
 	width: 100%;
 	text-align: center;
 	font-size: 3rem;
-	background-color: rgb(147, 133, 133);
+	background-color: rgb(199, 125, 125);
 	transition: .3s ease-in-out;
 }
 
@@ -73,15 +90,15 @@ nav {
 
 #nav-toggle-label {
 	position: fixed;
-	top: 30px;
-	left: 20px;
+	top: 15px;
+	left: 5px;
 }
 
 #nav-toggle-label span,
 #nav-toggle-label::before,
 #nav-toggle-label::after {
 	display: block;
-	background: white;
+	background: hsla(0, 0%, 0%, .3);
 	height: 4px;
 	width: 2rem;
 	border-radius: 4px;
@@ -104,9 +121,10 @@ nav {
 
 #menu-word {
 	position: fixed;
-	top: 45px;
-	color: white;
-	left: 20px;
+	top: 30px;
+	color: hsla(0, 0%, 0%, .3);
+	font-weight: bold;
+	left: 5px;
 	font-size: .7rem;
 }
 
