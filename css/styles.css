@@ -38,7 +38,8 @@ header {
 	grid-template-rows: auto;
 	grid-template-areas:
 		"title menu-social";
-	position: fixed;
+	position: sticky;
+	top: 0;
 	width: 100%;
 	background-color: var(--mint-cream);
 }
@@ -103,5 +104,6 @@ nav {
 #nav-toggle:checked ~ nav {
 	top: 0;
 	left: 0;
+	height: 100%;
 	transition: .3s ease-in-out;
 }
