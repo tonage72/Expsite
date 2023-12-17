@@ -18,12 +18,25 @@ html {
 }
 
 :root {
-	--bg-color: hsla(209, 100%, 8%, 1);
-	--title: hsla(155, 11%, 50%, 1);
+	--bg-color: hsla(197, 100%, 5%, 1);
+	--h1-color: hsla(160, 41%, 70%, 1);
+	--h3-color: hsla(45, 60%, 78%, 1);
+	--hr-color: hsla(181, 88%, 31%, 1);
 	--columbia-blue: hsla(212, 42%, 82%, 1);
 	--mint-cream: hsla(138, 33%, 94%, 1);
 	--desert-sand: hsla(27, 37%, 76%, 1);
 	--gray: hsla(0, 0%, 50%, 1);
+
+	--rich-black: hsla(197, 100%, 5%, 1);
+	--midnight-green: hsla(190, 100%, 23%, 1);
+	--dark-cyan: hsla(181, 88%, 31%, 1);
+	--tiffany-blue: hsla(160, 41%, 70%, 1);
+	--vanilla: hsla(45, 60%, 78%, 1);
+	--gamboge: hsla(39, 100%, 47%, 1);
+	--alloy-orange: hsla(30, 98%, 40%, 1);
+	--rust: hsla(19, 97%, 37%, 1);
+	--rufous: hsla(5, 81%, 38%, 1);
+	--auburn: hsla(358, 64%, 37%, 1);
 }
 
 body {
@@ -37,18 +50,30 @@ header {
 	grid-template-columns: 1fr 45px;
 	grid-template-rows: auto;
 	grid-template-areas:
-		"title menu-social";
+		"title-hr-info menu-social";
 	height: fit-content;
+	background-color: var(--bg-color);
 	position: sticky;
 	top: 0;
 	width: 100%;
 }
 
+#title-hr-info {
+	position: relative;
+	left: 22px;
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	margin: 0 auto;
+	grid-area: title-hr-info;
+}
+
 #title {
-	grid-area: title;
-	font-size: clamp(.2rem, 8vw, 5rem);
+	font-size: clamp(.2rem, 8vw, 4rem);
 	line-height: 1em;
-	color: var(--title);
+	color: var(--h1-color);
 	border-radius: 10px;
 	text-align: center;
 }
@@ -69,8 +94,8 @@ header {
 }
 
 header hr {
-	width: clamp(2ch, 65vw, 75ch);
-	border: 1px solid white;
+	width: 100%;
+	border: 1px solid --hr-color;
 	margin: 5px auto 5px auto;
 	border-radius: 2px;
 }
@@ -82,20 +107,36 @@ header hr {
 }
 
 #est-pastor-div {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
 	text-align: center;
 	margin-bottom: .5rem;
 }
 
 #est-text {
-	color: var(--gray);
+	color: var(--h3-color);
 }
 
 #pastor-text {
-	color: var(--title)
+	color: var(--h3-color)
 }
 
 main {
 	height: 100%;
+}
+
+h1 {
+	text-shadow: 4px 4px 7px grey;
+}
+
+h3 {
+	font-weight: 500;
+	text-shadow: 2px 2px 5px orange;
+}
+
+hr {
+	box-shadow: 2px 2px 5px white;
 }
 
 nav {
@@ -140,4 +181,9 @@ nav {
 	top: 0;
 	right: 0;
 	transition: .3s ease-in-out;
+}
+
+#three-crosses {
+	max-width: 500px;
+	margin: 0 auto;
 }
