@@ -20,7 +20,7 @@ html {
 :root {
 	--bg-color: hsla(197, 100%, 5%, 1);
 	--h1-color: hsla(160, 41%, 70%, 1);
-	--h3-color: hsla(45, 60%, 78%, 1);
+	--h3-color: hsla(212, 42%, 82%, 1);
 	--hr-color: hsla(181, 88%, 31%, 1);
 	--columbia-blue: hsla(212, 42%, 82%, 1);
 	--mint-cream: hsla(138, 33%, 94%, 1);
@@ -47,14 +47,15 @@ header {
 	display: grid;
 	align-items: center;
 	justify-content: center;
-	grid-template-columns: auto auto auto;
+	grid-template-columns: 6ch auto 6ch;
 	grid-template-rows: auto auto;
 	grid-template-areas:
-		"title title title"
-		"est social pastor";
+		"est title social"
+		"pastor pastor pastor";
 	background-color: var(--bg-color);
 	position: sticky;
 	top: 0;
+	padding: 1rem 0 1rem 0;
 }
 
 #title {
@@ -65,31 +66,36 @@ header {
 	text-align: center;
 }
 
-#menu-social {
-	grid-area: social;
-	display: flex;
-	height: 100%;
-	flex-flow: row nowrap;
-	justify-content: center;
-}
-
-#menu-social > img {
-	width: 28px;
-}
-
-#est-text,
-#pastor-text {
-	text-align: center;
-}
-
 #est-text {
 	grid-area: est;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	text-align: center;
+	height: 100%;
+	flex-flow: column nowrap;
 	color: var(--h3-color);
+	line-height: 1rem;
 }
 
 #pastor-text {
 	grid-area: pastor;
-	color: var(--h3-color)
+	text-align: center;
+	color: var(--h3-color);
+}
+
+#menu-social {
+	grid-area: social;
+	display: flex;
+	height: 100%;
+	flex-flow: column nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	gap: .5ch;
+}
+
+#menu-social > img {
+	width: 28px;
 }
 
 main {
