@@ -50,7 +50,7 @@ header {
 	grid-template-columns: 6ch auto 6ch;
 	grid-template-rows: auto auto;
 	grid-template-areas:
-		"est title social"
+		"social title est"
 		"pastor pastor pastor";
 	background-color: var(--bg-color);
 	position: sticky;
@@ -98,6 +98,19 @@ header {
 	width: 28px;
 }
 
+#burger {
+	position: absolute;
+	background-color: orange;
+	width: 50px;
+	top: 20px;
+	right: 20px;
+	padding: .2rem;
+}
+
+#burger-checkbox {
+	display: none;
+}
+
 main {
 	height: 100%;
 }
@@ -113,8 +126,8 @@ h3 {
 
 nav {
 	position: absolute;
-	top: -100%;
-	right: -100%;
+	display: none;
+	top: 0;
 	width: 100%;
 	text-align: center;
 	font-size: 3rem;
@@ -129,4 +142,8 @@ nav ul {
 #three-crosses {
 	max-width: 500px;
 	margin: 0 auto;
+}
+
+#burger-checkbox:checked ~ nav {
+	display: block;
 }
