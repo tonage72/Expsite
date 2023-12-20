@@ -99,7 +99,7 @@ header {
 }
 
 #burger {
-	position: absolute;
+	position: fixed;
 	background-color: orange;
 	width: 50px;
 	top: 20px;
