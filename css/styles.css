@@ -51,7 +51,7 @@ header {
 	grid-template-rows: auto auto;
 	grid-template-areas:
 		"social title null"
-		"pastor pastor pastor";
+		"est-pastor est-pastor est-pastor";
 	background-color: var(--bg-color);
 	position: sticky;
 	top: 0;
@@ -66,23 +66,11 @@ header {
 	text-align: center;
 }
 
-#est-text {
-	grid-area: est;
-	display: flex;
-	align-items: center;
-	justify-content: flex-end;
-	text-align: center;
-	height: 100%;
-	flex-flow: column nowrap;
-	color: var(--h3-color);
-	line-height: 1rem;
-}
-
-#pastor-text {
+#est-pastor-text {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	grid-area: pastor;
+	grid-area: est-pastor;
 	padding: 0 3rem 0 3rem;
 	color: var(--h3-color);
 }
