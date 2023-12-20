@@ -47,10 +47,10 @@ header {
 	display: grid;
 	align-items: center;
 	justify-content: center;
-	grid-template-columns: 6ch auto 6ch;
+	grid-template-columns: 3rem auto 3rem;
 	grid-template-rows: auto auto;
 	grid-template-areas:
-		"social title est"
+		"social title null"
 		"pastor pastor pastor";
 	background-color: var(--bg-color);
 	position: sticky;
@@ -79,8 +79,11 @@ header {
 }
 
 #pastor-text {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	grid-area: pastor;
-	text-align: center;
+	padding: 0 3rem 0 3rem;
 	color: var(--h3-color);
 }
 
