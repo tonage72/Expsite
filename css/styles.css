@@ -68,6 +68,7 @@ header {
 
 #est-pastor-text {
 	display: flex;
+	flex-flow: row nowarp;
 	align-items: center;
 	justify-content: space-between;
 	grid-area: est-pastor;
@@ -123,7 +124,6 @@ nav {
 	text-align: center;
 	font-size: 3rem;
 	background-color: rgb(199, 125, 125);
-	transition: .3s ease-in-out;
 }
 
 nav ul {
@@ -137,4 +137,30 @@ nav ul {
 
 #burger-checkbox:checked ~ nav {
 	display: block;
+}
+
+@media (max-width: 480px) {
+	#burger {
+		position: fixed;
+		width: 30px;
+		top: 5px;
+		right: 5px;
+		padding: .2rem;
+	}
+}
+
+@media (max-width: 390px) {
+	#est-pastor-text {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: center;
+		justify-content: center;
+		grid-area: est-pastor;
+		padding: 0 0 0 0;
+		font-size: .8rem;
+	}
+}
+
+@media (max-width: 769px) {
+	
 }
