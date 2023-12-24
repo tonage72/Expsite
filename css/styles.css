@@ -37,14 +37,20 @@ html {
 	--rust: hsla(19, 97%, 37%, 1);
 	--rufous: hsla(5, 81%, 38%, 1);
 	--auburn: hsla(358, 64%, 37%, 1);
+
+	--border-radius: 25px;
+	--border-radius-header: 0 0 25px 25px;
 }
 
 a {
 	text-decoration: none;
+	cursor: pointer;
 }
 
 body {
 	background-color: var(--bg-color);
+	padding: 0 3rem 3rem 3rem;
+	background-color: orange;
 }
 
 header {
@@ -59,6 +65,7 @@ header {
 	background-color: var(--bg-color);
 	position: sticky;
 	top: 0;
+	border-radius: var(--border-radius-header);
 	padding: 1rem 0 1rem 0;
 }
 
@@ -108,7 +115,9 @@ header {
 }
 
 main {
+	position: relative;
 	height: 100%;
+	z-index: -1;
 }
 
 h1 {
@@ -117,13 +126,11 @@ h1 {
 
 h3 {
 	font-weight: 500;
-	text-shadow: 2px 2px 5px orange;
 }
 
 nav {
 	position: absolute;
 	display: none;
-	top: 0;
 	width: 100%;
 	text-align: center;
 	font-size: 1.5rem;
@@ -141,10 +148,6 @@ nav ul {
 
 #burger-checkbox:checked ~ nav {
 	display: block;
-}
-
-#content {
-	z-index: -1;
 }
 
 @media (max-width: 480px) {
@@ -176,25 +179,35 @@ nav ul {
 		grid-template-columns: 200px 1fr;
 		grid-template-rows: auto;
 		grid-template-areas:
-			"nav main";
-	}
-
-	#nav-grid-area {
-		grid-area: nav;
-		position: relative;
+			"nav-grid-area main-grid-area";
 	}
 
 	nav {
+		grid-area: nav-grid-area;
 		display: block;
 		position: fixed;
-		width: fit-content;
-		background-color: orange;
-		top: 20px;
-		left: 20px;
-		width: fit-content;
+		width: 200px;
+		height: 100%;
+		font-size: 2rem;
+		background-color: black;
+		border-radius: var(--border-radius);
+		margin-top: .5rem;
+		padding: 3rem 0 0 0;
+	}
+
+	#main-content {
+		grid-area: main-grid-area;
 	}
 
 	#burger {
 		display: none;
+	}
+
+	nav ul li {
+		line-height: 5rem;
+	}
+
+	#burger a:hover {
+		background-color: orange;
 	}
 }
