@@ -18,29 +18,18 @@ html {
 }
 
 :root {
-	--bg-color: hsla(190, 100%, 23%, 1);
+	--bg-color: rgb(53, 0, 0);
 	--h1-color: hsla(160, 41%, 70%, 1);
 	--h3-color: hsla(212, 42%, 82%, 1);
 	--hr-color: hsla(181, 88%, 31%, 1);
-	--header-aside-bgcolor: hsla(358, 64%, 37%, 1);
+	--header-aside-bgcolor: rgb(58, 62, 63);
+	--button-color: rgb(196, 164, 106);
 	--columbia-blue: hsla(212, 42%, 82%, 1);
 	--mint-cream: hsla(138, 33%, 94%, 1);
 	--desert-sand: hsla(27, 37%, 76%, 1);
 	--gray: hsla(0, 0%, 50%, 1);
 
-	--rich-black: hsla(197, 100%, 5%, 1);
-	--midnight-green: hsla(190, 100%, 23%, 1);
-	--dark-cyan: hsla(181, 88%, 31%, 1);
-	--tiffany-blue: hsla(160, 41%, 70%, 1);
-	--vanilla: hsla(45, 60%, 78%, 1);
-	--gamboge: hsla(39, 100%, 47%, 1);
-	--alloy-orange: hsla(30, 98%, 40%, 1);
-	--rust: hsla(19, 97%, 37%, 1);
-	--rufous: hsla(5, 81%, 38%, 1);
-	--auburn: ;
-
-	--border-radius: 0;
-	--border-radius-header: 0;
+	--shadow-boxes: 0 0 15px 0 black;
 }
 
 a {
@@ -67,6 +56,8 @@ header {
 	border-radius: var(--border-radius-header);
 	padding: 1rem 0 1rem 0;
 	z-index: 10;
+	box-shadow: var(--shadow-boxes);
+	clip-path: inset(0px 0px -15px 0px);
 }
 
 #title {
@@ -205,6 +196,8 @@ nav ul {
 		border-radius: var(--border-radius);
 		padding: 0;
 		z-index: 30;
+		box-shadow: var(--shadow-boxes);
+		clip-path: inset(0px -15px 0px 0px);
 	}
 
 	#main-content {
@@ -221,7 +214,7 @@ nav ul {
 	}
 
 	nav ul li {
-		background-color: orange;
+		background-color: var(--button-color);
 		position: relative;
 		padding: 0 1rem;
 		margin: 3rem 0;
@@ -241,5 +234,8 @@ nav ul {
 		box-shadow: -5px -5px 40px 20px white;
 	}
 
-
+	#title {
+		white-space: nowrap;
+		font-size: clamp(.2rem, 5vw, 4rem);
+	}
 }
