@@ -24,12 +24,10 @@ html {
 	--hr-color: hsla(181, 88%, 31%, 1);
 	--header-aside-bgcolor: rgb(58, 62, 63);
 	--button-color: rgb(196, 164, 106);
-	--columbia-blue: hsla(212, 42%, 82%, 1);
-	--mint-cream: hsla(138, 33%, 94%, 1);
-	--desert-sand: hsla(27, 37%, 76%, 1);
-	--gray: hsla(0, 0%, 50%, 1);
+	--button-color-hover: black;
 
-	--shadow-boxes: 0 0 15px 0 black;
+	--shadow-boxes: 0 0 10px 0 black;
+	--shadow-text: 5px 5px 5px black;
 }
 
 a {
@@ -112,7 +110,7 @@ main {
 }
 
 h1 {
-	text-shadow: 4px 4px 7px grey;
+	text-shadow: var(--shadow-text);
 }
 
 h3 {
@@ -221,17 +219,31 @@ nav ul {
 		font-weight: 700;
 		rotate: 20deg;
 		border-radius: 20px;
+		box-shadow: var(--shadow-boxes);
+		transition: color 1s ease-in-out, background-color 1s ease-in-out;
 	}
 
-	nav ul li:hover:before {
+	nav ul li:before {
 		content: "";
 		position: absolute;
 		bottom: 0;
 		left: 10%;
 		width: 80%;
-		height: 1px;
 		background-color: yellow;
-		box-shadow: -5px -5px 40px 20px white;
+		box-shadow: 0 0 30px 10px white;
+		opacity: 0;
+		transition: opacity 1s ease-in-out;
+	}
+
+	nav ul li:hover:before {
+		opacity: 1;
+		transition: opacity 200ms ease-in-out;
+	}
+
+	nav ul li:hover {
+		color: white;
+		background-color: var(--button-color-hover);
+		transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
 	}
 
 	#title {
