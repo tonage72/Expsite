@@ -18,10 +18,11 @@ html {
 }
 
 :root {
-	--bg-color: hsla(197, 100%, 5%, 1);
+	--bg-color: hsla(190, 100%, 23%, 1);
 	--h1-color: hsla(160, 41%, 70%, 1);
 	--h3-color: hsla(212, 42%, 82%, 1);
 	--hr-color: hsla(181, 88%, 31%, 1);
+	--header-aside-bgcolor: hsla(358, 64%, 37%, 1);
 	--columbia-blue: hsla(212, 42%, 82%, 1);
 	--mint-cream: hsla(138, 33%, 94%, 1);
 	--desert-sand: hsla(27, 37%, 76%, 1);
@@ -36,7 +37,7 @@ html {
 	--alloy-orange: hsla(30, 98%, 40%, 1);
 	--rust: hsla(19, 97%, 37%, 1);
 	--rufous: hsla(5, 81%, 38%, 1);
-	--auburn: hsla(358, 64%, 37%, 1);
+	--auburn: ;
 
 	--border-radius: 25px;
 	--border-radius-header: 0 0 25px 25px;
@@ -44,13 +45,11 @@ html {
 
 a {
 	text-decoration: none;
-	cursor: pointer;
 }
 
 body {
 	background-color: var(--bg-color);
 	padding: 0 3rem 3rem 3rem;
-	background-color: orange;
 }
 
 header {
@@ -62,11 +61,12 @@ header {
 	grid-template-areas:
 		"social title null"
 		"est-pastor est-pastor est-pastor";
-	background-color: var(--bg-color);
+	background-color: var(--header-aside-bgcolor);
 	position: sticky;
 	top: 0;
 	border-radius: var(--border-radius-header);
 	padding: 1rem 0 1rem 0;
+	z-index: 10;
 }
 
 #title {
@@ -108,6 +108,7 @@ header {
 	top: 20px;
 	right: 20px;
 	padding: .2rem;
+	z-index: 20;
 }
 
 #burger-checkbox {
@@ -117,7 +118,6 @@ header {
 main {
 	position: relative;
 	height: 100%;
-	z-index: -1;
 }
 
 h1 {
@@ -186,13 +186,15 @@ nav ul {
 		grid-area: nav-grid-area;
 		display: block;
 		position: fixed;
+		top: 10px;
 		width: 200px;
 		height: 100%;
 		font-size: 2rem;
-		background-color: black;
+		background-color: var(--header-aside-bgcolor);
 		border-radius: var(--border-radius);
 		margin-top: .5rem;
 		padding: 3rem 0 0 0;
+		z-index: 30;
 	}
 
 	#main-content {
@@ -205,9 +207,10 @@ nav ul {
 
 	nav ul li {
 		line-height: 5rem;
+		width: 100%;
 	}
 
-	#burger a:hover {
+	nav a {
 		background-color: orange;
 	}
 }
