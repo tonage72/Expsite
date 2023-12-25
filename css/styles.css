@@ -39,8 +39,8 @@ html {
 	--rufous: hsla(5, 81%, 38%, 1);
 	--auburn: ;
 
-	--border-radius: 25px;
-	--border-radius-header: 0 0 25px 25px;
+	--border-radius: 0;
+	--border-radius-header: 0;
 }
 
 a {
@@ -49,14 +49,14 @@ a {
 
 body {
 	background-color: var(--bg-color);
-	padding: 0 3rem 3rem 3rem;
+	padding: 0;
 }
 
 header {
 	display: grid;
 	align-items: center;
 	justify-content: center;
-	grid-template-columns: 3rem auto 3rem;
+	grid-template-columns: 3rem min-content 3rem;
 	grid-template-rows: auto auto;
 	grid-template-areas:
 		"social title null"
@@ -150,7 +150,12 @@ nav ul {
 	display: block;
 }
 
+#title span {
+	white-space: nowrap;
+}
+
 @media (max-width: 480px) {
+
 	#burger {
 		position: fixed;
 		width: 30px;
@@ -161,6 +166,7 @@ nav ul {
 }
 
 @media (max-width: 390px) {
+
 	#est-pastor-text {
 		display: flex;
 		flex-flow: column nowrap;
@@ -170,6 +176,12 @@ nav ul {
 		padding: 0 0 0 0;
 		font-size: .8rem;
 	}
+
+	#menu-social img {
+		width: 18px;
+	}
+
+
 }
 
 @media (min-width: 769px) {
@@ -186,14 +198,12 @@ nav ul {
 		grid-area: nav-grid-area;
 		display: block;
 		position: fixed;
-		top: 10px;
 		width: 200px;
 		height: 100%;
 		font-size: 2rem;
 		background-color: var(--header-aside-bgcolor);
 		border-radius: var(--border-radius);
-		margin-top: .5rem;
-		padding: 3rem 0 0 0;
+		padding: 0;
 		z-index: 30;
 	}
 
@@ -205,12 +215,31 @@ nav ul {
 		display: none;
 	}
 
-	nav ul li {
-		line-height: 5rem;
-		width: 100%;
+	nav ul {
+		width: fit-content;
+		margin: 0 auto;
 	}
 
-	nav a {
+	nav ul li {
 		background-color: orange;
+		position: relative;
+		padding: 0 1rem;
+		margin: 3rem 0;
+		font-weight: 700;
+		rotate: 20deg;
+		border-radius: 20px;
 	}
+
+	nav ul li:hover:before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 10%;
+		width: 80%;
+		height: 1px;
+		background-color: yellow;
+		box-shadow: -5px -5px 40px 20px white;
+	}
+
+
 }
