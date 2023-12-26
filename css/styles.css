@@ -23,11 +23,13 @@ html {
 	--h3-color: hsla(212, 42%, 82%, 1);
 	--hr-color: hsla(181, 88%, 31%, 1);
 	--header-aside-bgcolor: rgb(58, 62, 63);
-	--button-color: rgb(196, 164, 106);
+	--button-color: rgb(141, 107, 43);
 	--button-color-hover: black;
 
-	--shadow-boxes: 0 0 10px 0 black;
+	--nav-text-color: hsla(160, 41%, 70%, 1);
+	--shadow-boxes: 1px 1px 10px 0 black;
 	--shadow-text: 5px 5px 5px black;
+	--shadow-nav-text: 2px 2px 10px black;
 }
 
 a {
@@ -188,14 +190,13 @@ nav ul {
 		display: block;
 		position: fixed;
 		width: 200px;
-		height: 100%;
+		height: fit-content;
 		font-size: 2rem;
 		background-color: var(--header-aside-bgcolor);
 		border-radius: var(--border-radius);
 		padding: 0;
-		z-index: 30;
 		box-shadow: var(--shadow-boxes);
-		clip-path: inset(0px -15px 0px 0px);
+		clip-path: inset(0px -15px -15px 0px);
 	}
 
 	#main-content {
@@ -219,7 +220,9 @@ nav ul {
 		font-weight: 700;
 		rotate: 20deg;
 		border-radius: 20px;
+		color: var(--nav-text-color);
 		box-shadow: var(--shadow-boxes);
+		text-shadow: var(--shadow-nav-text);
 		transition: color 1s ease-in-out, background-color 1s ease-in-out;
 	}
 
@@ -229,7 +232,6 @@ nav ul {
 		bottom: 0;
 		left: 10%;
 		width: 80%;
-		background-color: yellow;
 		box-shadow: 0 0 30px 10px white;
 		opacity: 0;
 		transition: opacity 1s ease-in-out;
