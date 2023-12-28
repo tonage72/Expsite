@@ -132,7 +132,7 @@ nav ul {
 	list-style-type: none;
 }
 
-#three-crosses {
+.three-crosses {
 	max-width: 500px;
 	margin: 0 auto;
 }
@@ -143,6 +143,10 @@ nav ul {
 
 #title span {
 	white-space: nowrap;
+}
+
+#main-content {
+	padding: 2rem;
 }
 
 @media (max-width: 480px) {
