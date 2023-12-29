@@ -18,16 +18,16 @@ html {
 }
 
 :root {
-	--bg-color: rgb(53, 0, 0);
-	--h1-color: hsla(160, 41%, 70%, 1);
-	--h3-color: hsla(212, 42%, 82%, 1);
+	--bg-color: radial-gradient(rgb(90, 0, 0), rgb(54, 66, 0));
+	--h1-color: rgb(158, 116, 37);
+	--h3-color: rgb(255, 255, 255);
 	--hr-color: hsla(181, 88%, 31%, 1);
-	--header-aside-bgcolor: rgb(58, 62, 63);
-	--button-color: rgb(141, 107, 43);
-	--button-color-hover: black;
+	--header-aside-bgcolor: radial-gradient(rgb(0, 0, 0), rgb(54, 66, 0));
+	--button-color: rgb(158, 116, 37);
+	--title-first-letter-color: orange;
 
-	--nav-text-color: hsla(160, 41%, 70%, 1);
-	--shadow-boxes: 1px 1px 10px 0 black;
+	--nav-text-color: rgb(194, 235, 221);
+	--shadow-boxes: 2px 2px 15px 2px black;
 	--shadow-text: 5px 5px 5px black;
 	--shadow-nav-text: 2px 2px 10px black;
 }
@@ -37,7 +37,7 @@ a {
 }
 
 body {
-	background-color: var(--bg-color);
+	background: var(--bg-color);
 	padding: 0;
 }
 
@@ -50,7 +50,7 @@ header {
 	grid-template-areas:
 		"social title null"
 		"est-pastor est-pastor est-pastor";
-	background-color: var(--header-aside-bgcolor);
+	background: var(--header-aside-bgcolor);
 	position: sticky;
 	top: 0;
 	border-radius: var(--border-radius-header);
@@ -58,6 +58,7 @@ header {
 	z-index: 10;
 	box-shadow: var(--shadow-boxes);
 	clip-path: inset(0px 0px -15px 0px);
+	border-radius: 0 0 20px 20px;
 }
 
 #title {
@@ -66,6 +67,10 @@ header {
 	line-height: 1em;
 	color: var(--h1-color);
 	text-align: center;
+}
+
+.first-letter {
+	color: var(--title-first-letter-color);
 }
 
 #est-pastor-text {
@@ -193,14 +198,16 @@ nav ul {
 		grid-area: nav-grid-area;
 		display: block;
 		position: fixed;
-		width: 200px;
+		width: 210px;
 		height: fit-content;
 		font-size: 2rem;
-		background-color: var(--header-aside-bgcolor);
+		background: var(--header-aside-bgcolor);
 		border-radius: var(--border-radius);
 		padding: 0;
 		box-shadow: var(--shadow-boxes);
 		clip-path: inset(0px -15px -15px 0px);
+		margin-top: .5rem;
+		border-radius: 0 20px 20px 0;
 	}
 
 	#main-content {
@@ -219,15 +226,15 @@ nav ul {
 	nav ul li {
 		background-color: var(--button-color);
 		position: relative;
-		padding: 0 1rem;
+		padding: 0 1.5rem .3rem 1.5rem;
 		margin: 3rem 0;
 		font-weight: 700;
 		rotate: 20deg;
-		border-radius: 20px;
+		border-radius: 0 30px;
 		color: var(--nav-text-color);
 		box-shadow: var(--shadow-boxes);
 		text-shadow: var(--shadow-nav-text);
-		transition: color 1s ease-in-out, background-color 1s ease-in-out;
+		transition: color 700ms ease-in-out, background-color 700ms ease-in-out;
 	}
 
 	nav ul li:before {
@@ -238,18 +245,35 @@ nav ul {
 		width: 80%;
 		box-shadow: 0 0 30px 10px white;
 		opacity: 0;
-		transition: opacity 1s ease-in-out;
+		transition: opacity 700ms ease-in-out;
+	}
+
+	nav ul li:after {
+		content: "";
+		position: absolute;
+		width: 20px;
+		height: 100%;
+		background-color: orange;
+		border-radius: 0 30px;
+		box-shadow: var(--shadow-boxes);
+		right: 165px;
+		top: 0;
+		transition: right 700ms ease-in-out, border-radius 700ms ease-in-out;
 	}
 
 	nav ul li:hover:before {
 		opacity: 1;
-		transition: opacity 200ms ease-in-out;
+		transition: opacity 300ms ease-in-out;
+	}
+
+	nav ul li:hover:after {
+		right: -3px;
+		transition: right 300ms ease-in-out, border-radius 300ms ease-in-out;
 	}
 
 	nav ul li:hover {
-		color: white;
-		background-color: var(--button-color-hover);
-		transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+		color: rgb(224, 228, 2);
+		transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
 	}
 
 	#title {
