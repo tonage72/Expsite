@@ -188,6 +188,10 @@ nav ul li:after {
 	padding: 2rem;
 }
 
+#current-location {
+	background-color: black;
+}
+
 @media (max-width: 480px) {
 
 	#burger {
