@@ -26,16 +26,15 @@ html {
 }
 
 :root {
-	--bg-color: radial-gradient(rgb(90, 0, 0), rgb(54, 66, 0));
+	--bg-color-body: radial-gradient(rgb(90, 0, 0), rgb(54, 66, 0));
 	--title-color: rgb(158, 116, 37);
-	--est-pastor-color: rgb(255, 255, 255);
+	--est-pastor-color: rgb(238, 255, 0);
 	--header-aside-bgcolor: radial-gradient(circle, rgb(0, 0, 0), rgb(54, 66, 0));
 	--button-color: rgb(158, 116, 37);
 	--title-first-letter-color: orange;
 	--nav-text-color: rgb(194, 235, 221);
 	--shadow-boxes: 3px 3px 5px black;
 	--shadow-text: 5px 5px 5px black;
-	--shadow-nav-text: 2px 2px 10px black;
 	--border-radius-divs: 2rem;
 }
 
@@ -45,7 +44,7 @@ a {
 }
 
 body {
-	background: var(--bg-color);
+	background: var(--bg-color-body);
 	padding: 0;
 }
 
@@ -154,7 +153,7 @@ nav ul li {
 	margin: 2rem 0;
 	border-radius: 0 30px;
 	padding: 0 1.5rem .3rem 1.5rem;
-	text-shadow: var(--shadow-nav-text);
+	text-shadow: var(--shadow-text);
 	color: var(--nav-text-color);
 }
 
