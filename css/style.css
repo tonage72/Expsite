@@ -238,6 +238,7 @@ nav ul li:hover:after {
 	background-color: black;
 }
 
+/* general article settings */
 article {
 	padding: 1rem;
 	background: var(--header-aside-bgcolor);
