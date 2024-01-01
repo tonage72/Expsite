@@ -283,9 +283,9 @@ article img {
 
 .image-gallery {
 	display: flex;
-	flex-flow: row;
+	flex-flow: row nowrap;
+	/* justify-content: flex-start; */
 	padding-top: 1rem;
-	justify-content: center;
 	gap: 2vw;
 }
 
