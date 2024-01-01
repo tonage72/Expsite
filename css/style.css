@@ -203,9 +203,31 @@ article {
 	padding: 1rem;
 	background: var(--header-aside-bgcolor);
 	box-shadow: var(--shadow-boxes);
-	width: auto;
+	width: fit-content;
 	border-radius: var(--border-radius-divs);
 }
+
+article a {
+	display: block;
+	color: yellow;
+	font-weight: 800;
+	width: fit-content;
+}
+
+article a:hover {
+	animation: link-shake 500ms;
+	animation-iteration-count: infinite;
+	color: orange;
+}
+
+@keyframes link-shake {
+	50% {
+		rotate: 10deg;
+		scale: 1.3;
+	}
+}
+
+
 
 article .article-heading {
 	font-size: 2rem;
@@ -323,8 +345,16 @@ iframe {
 	}
 
 	nav ul li:hover {
+		animation: nav-li-shake 400ms infinite;
 		color: rgb(224, 228, 2);
-		transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+		transition: color 300ms ease-in-out;
+	}
+
+	@keyframes nav-li-shake {
+		50% {
+			scale: 1.05;
+			rotate: 23deg;
+		}
 	}
 
 	#title {
