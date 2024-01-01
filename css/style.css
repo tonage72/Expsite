@@ -282,9 +282,8 @@ article img {
 }
 
 .image-gallery {
-	display: flex;
-	flex-flow: row nowrap;
-	/* justify-content: flex-start; */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(min(50px, 100%), 1fr));
 	padding-top: 1rem;
 	gap: 2vw;
 }
