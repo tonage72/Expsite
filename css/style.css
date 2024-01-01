@@ -101,7 +101,7 @@ header {
 	gap: .5ch;
 }
 
-#menu-social > img {
+#menu-social > a > img {
 	width: 28px;
 }
 
