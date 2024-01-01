@@ -283,7 +283,7 @@ article img {
 
 .image-gallery {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(min(50px, 100%), 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(min(45px, 100%), 1fr));
 	padding-top: 1rem;
 	gap: 2vw;
 }
