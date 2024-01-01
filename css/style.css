@@ -253,7 +253,7 @@ article a {
 	width: fit-content;
 }
 
-article a:hover {
+.shake-div-hover:hover {
 	animation: link-shake 500ms;
 	animation-iteration-count: infinite;
 	color: orange;
