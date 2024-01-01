@@ -132,12 +132,12 @@ nav {
 	position: fixed;
 	right: -100%;
 	top: -100%;
-	margin-top: .5rem;
 	background: var(--header-aside-bgcolor);
 	text-align: center;
 	font-size: 2rem;
 	transition: right 300ms ease-in-out, top 300ms ease-in-out;
 	opacity: .9;
+	border-radius: var(--border-radius-divs);
 }
 
 nav ul {
@@ -155,6 +155,40 @@ nav ul li {
 	padding: 0 1.5rem .3rem 1.5rem;
 	text-shadow: var(--shadow-text);
 	color: var(--nav-text-color);
+
+	rotate: 20deg;
+	box-shadow: var(--shadow-boxes);
+	margin: 3rem 0;
+	transition: color 700ms ease-in-out, background-color 700ms ease-in-out;
+}
+
+nav ul li:hover {
+	animation: nav-li-shake 400ms infinite;
+	color: rgb(224, 228, 2);
+	transition: color 300ms ease-in-out;
+}
+
+@keyframes nav-li-shake {
+	50% {
+		scale: 1.05;
+		rotate: 23deg;
+	}
+}
+
+nav ul li:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 10%;
+	width: 80%;
+	box-shadow: 0 0 30px 10px white;
+	opacity: 0;
+	transition: opacity 700ms ease-in-out;
+}
+
+nav ul li:hover:before {
+	opacity: 1;
+	transition: opacity 300ms ease-in-out;
 }
 
 nav ul li:after {
@@ -168,6 +202,11 @@ nav ul li:after {
 	right: 165px;
 	top: 0;
 	transition: right 700ms ease-in-out;
+}
+
+nav ul li:hover:after {
+	right: -3px;
+	transition: right 300ms ease-in-out;
 }
 
 .three-crosses {
@@ -227,8 +266,6 @@ article a:hover {
 	}
 }
 
-
-
 article .article-heading {
 	font-size: 2rem;
 	font-weight: 600;
@@ -240,8 +277,8 @@ article img {
 }
 
 .icon {
-	margin: 0 auto;
-	width: 6vw;
+	width: clamp(30px, 6vw, 100px);
+	border-radius: 0;
 }
 
 .image-gallery {
@@ -305,7 +342,7 @@ iframe {
 		left: 0;
 		top: auto;
 		box-shadow: var(--shadow-boxes);
-		border-radius: var(--border-radius-divs);
+		margin-top: .5rem;
 	}
 
 	#main-content {
@@ -314,47 +351,6 @@ iframe {
 
 	#burger {
 		display: none;
-	}
-
-	nav ul li {
-		rotate: 20deg;
-		box-shadow: var(--shadow-boxes);
-		margin: 3rem 0;
-		transition: color 700ms ease-in-out, background-color 700ms ease-in-out;
-	}
-
-	nav ul li:before {
-		content: "";
-		position: absolute;
-		bottom: 0;
-		left: 10%;
-		width: 80%;
-		box-shadow: 0 0 30px 10px white;
-		opacity: 0;
-		transition: opacity 700ms ease-in-out;
-	}
-
-	nav ul li:hover:before {
-		opacity: 1;
-		transition: opacity 300ms ease-in-out;
-	}
-
-	nav ul li:hover:after {
-		right: -3px;
-		transition: right 300ms ease-in-out;
-	}
-
-	nav ul li:hover {
-		animation: nav-li-shake 400ms infinite;
-		color: rgb(224, 228, 2);
-		transition: color 300ms ease-in-out;
-	}
-
-	@keyframes nav-li-shake {
-		50% {
-			scale: 1.05;
-			rotate: 23deg;
-		}
 	}
 
 	#title {
