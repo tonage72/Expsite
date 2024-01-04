@@ -231,7 +231,7 @@ nav ul li:hover:after {
 	align-items: center;
 	flex-flow: column nowrap;
 	gap: 2rem;
-	padding: 2rem;
+	padding: 0;
 }
 
 #current-location {
@@ -243,7 +243,6 @@ article {
 	padding: 1rem;
 	background: var(--header-aside-bgcolor);
 	box-shadow: var(--shadow-boxes);
-	width: fit-content;
 	border-radius: var(--border-radius-divs);
 }
 
@@ -347,6 +346,7 @@ iframe {
 
 	#main-content {
 		grid-area: main-grid-area;
+		padding: 2rem;
 	}
 
 	#burger {
