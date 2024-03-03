@@ -282,7 +282,7 @@ article a {
 
 @keyframes link-shake {
 	50% {
-		rotate: 10deg;
+		rotate: 2deg;
 		scale: 1.3;
 	}
 }
