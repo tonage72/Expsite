@@ -44,8 +44,9 @@ html {
 }
 
 iframe {
-	width: 90vw;
-	height: 50.6vw;
+	aspect-ratio: 16 / 9;
+	width: 85cqi;
+	height: 100%;
 	border: none;
 }
 
@@ -250,6 +251,7 @@ nav ul li:hover:after {
 	flex-flow: column nowrap;
 	gap: 2rem;
 	padding: 0;
+	container-type: inline-size;
 }
 
 #current-location {
@@ -356,10 +358,5 @@ article img {
 	#title {
 		white-space: nowrap;
 		font-size: clamp(.2rem, 5vw, 4rem);
-	}
-
-	iframe {
-		width: 60vw;
-		height: 33.75vw;
 	}
 }
